@@ -1,0 +1,2 @@
+# Below are the folders that will be ignored during the push:
+.venv/
