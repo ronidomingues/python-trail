@@ -32,3 +32,14 @@ Content focused on learning and developing the **Python Language**.
    ```
 
 5. Navigate to the any directory you want to work with and enjoy learning Python!
+6. To run all the tests in the tests directory:
+
+   ```bash
+   python -m unittest discover -s tests
+   ```
+
+7. To run a specific test file:
+
+   ```bash
+   python -m unittest tests.test_file_name
+   ```
