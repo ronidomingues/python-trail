@@ -10,25 +10,16 @@ class ArmstrongNumber:
         as casas da Centena, Dezena e Unidade do número X.
         Por fim um número de Armstrong é um número que é igual à soma de seus dígitos elevados à potência do número de dígitos.
     """
-    def __init__(self:object) -> None:
-        while True:
-            number = input("Digite o número que deseja conferir: ")
-            if number.isdigit():
-                self.number = number
-                self.lengh = len(self.number)
-                break
-            else:
-                print(f"Digite um número inteiro, o valor inserido ({number} não é válido!)", end="\n")
-                pass
-            pass
-        pass
+    def __init__(self:object, number: int = 153) -> None:
+        self.number = number
+        self.number_str = str(number) # Converte o número para string para facilitar na iteração sobre seus dígitos;
+        self.lengh = len(self.number_str) # Armazena o número de dígitos do número;
     def is_armstrong_number(self: object) -> bool:
-        number = int(self.number)
         sum_digit = 0
-        for digit in self.number:
+        for digit in self.number_str:
             sum_digit += (int(digit)) ** (self.lengh)
-        print(sum_digit == number)
-        return sum_digit == number
+        print(sum_digit == self.number)
+        return sum_digit == self.number
     def first_armstrong_number_between(self: object) -> list:
         pass
 #
